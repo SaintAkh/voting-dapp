@@ -7,4 +7,8 @@ contract Voting {
     function vote(string memory candidate) public {
         votes[candidate] += 1;
     }
+
+    function getVotes(string memory candidate) public view returns (uint) {
+        return votes[candidate];
+    }
 }
